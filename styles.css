@@ -2068,6 +2068,9 @@ body {
   }
 
   .trust-panel,
+  .intelligence-grid,
+  .intelligence-card,
+  .primary-intel,
   .map-card,
   .workout-card,
   .exercise-card,
@@ -2080,6 +2083,12 @@ body {
     background: white !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
+    color: black !important;
+  }
+
+  .intelligence-card p,
+  .intelligence-card small {
+    color: #444 !important;
   }
 }
 
