@@ -31,8 +31,8 @@
   --radius-md: 12px;
   --radius-sm: 8px;
   
-  --font-serif: "Instrument Serif", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   --container-max: 1180px;
 }
@@ -140,7 +140,7 @@ svg {
 .section-heading h2 {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 12px 0 20px;
@@ -460,7 +460,7 @@ svg {
 .hero-copy h1 {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 6.5vw, 6.2rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
@@ -542,7 +542,7 @@ svg {
 .signal-card h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3.2vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 12px;
 }
@@ -616,7 +616,7 @@ svg {
 .primer-card h2 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
 }
@@ -815,7 +815,7 @@ svg {
 .phase-card h3 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
   margin: 8px 0 16px;
 }
@@ -926,7 +926,7 @@ svg {
 .workout-head h3 {
   font-family: var(--font-serif);
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   margin: 6px 0;
 }
@@ -1104,7 +1104,7 @@ svg {
 .builder-copy h2 {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 5vw, 4.5rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
   margin: 10px 0 20px;
 }
@@ -1176,7 +1176,7 @@ svg {
 .prescription h3 {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 12px;
 }
@@ -1650,7 +1650,7 @@ svg {
 .redflag-card h3 {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   color: var(--accent-terracotta);
   margin-bottom: 20px;
@@ -1693,7 +1693,7 @@ svg {
 .source-card h2 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   margin: 6px 0 16px;
 }
