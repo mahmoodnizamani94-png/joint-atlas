@@ -604,7 +604,7 @@ svg {
   margin-bottom: 2px;
 }
 
-/* Plain English Panel */
+/* Clear Guide Panel */
 .primer-card {
   position: relative;
   background-color: var(--bg-card);
