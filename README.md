@@ -8,6 +8,7 @@ A polished static website for a complete non-surgical, cartilage-friendly moveme
 - `styles.css` — full responsive UI system, print styles, polished visual design
 - `script.js` — exercise library, filters, workout checklist, phase tabs, decision system
 - `sources.md` — source notes and demo links
+- `image-prompts.md` — GPT Images 2 prompt pack for replacing the generated SVG workout animations with static exercise visuals
 
 ## How to use
 
