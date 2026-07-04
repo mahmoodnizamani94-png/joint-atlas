@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
   
-  /* Curated Premium Color Palette (Warm Minimalist / Wellness Editorial) */
-  --bg-base: #FAF8F5;            /* Premium plaster/alabaster */
+  /* Curated Color Palette (Warm Minimalist / Wellness Editorial) */
+  --bg-base: #FAF8F5;            /* Warm plaster/alabaster */
   --bg-card: #FFFFFF;
   --bg-card-alt: #F4F2EE;
   
@@ -1963,7 +1963,7 @@ svg {
   }
 }
 
-/* 2026 premium design pass: editorial wellness, tactile cards, clearer UX hierarchy */
+/* 2026 refined design pass: editorial wellness, tactile cards, clearer UX hierarchy */
 :root {
   --bg-base: #f6f0e7;
   --bg-card: rgba(255, 252, 247, 0.88);
@@ -2122,7 +2122,7 @@ body {
   }
 }
 
-/* Premium UX upgrade: concierge intelligence strip and refined interaction states */
+/* UX upgrade: concierge intelligence strip and refined interaction states */
 .intelligence-panel {
   margin-top: -54px;
   position: relative;
