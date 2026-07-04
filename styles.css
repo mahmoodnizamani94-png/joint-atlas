@@ -472,6 +472,17 @@ svg { width: 100%; height: 100%; display: block; }
 @media (max-width: 1040px) {
   .desktop-nav, .nav-actions .btn { display: none; }
   .menu-button { display: block; }
+  .nav-shell {
+    justify-content: space-between;
+    padding-top: max(12px, env(safe-area-inset-top, 12px));
+    padding-bottom: 12px;
+    min-height: auto;
+  }
+  .site-header {
+    background: rgba(246,239,227,.95);
+    backdrop-filter: blur(22px);
+    border-bottom: 1px solid var(--line);
+  }
   .hero-grid, .plan-layout, .builder-grid, .library-top, .split-grid, .safety-grid { grid-template-columns: 1fr; }
   .sticky-heading, .builder-copy { position: static; }
   .map-grid { grid-template-columns: repeat(2, 1fr); }
