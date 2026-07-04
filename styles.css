@@ -2053,3 +2053,32 @@ body {
   .hero-copy h1 { max-width: none; }
   .signal-card { transform: none; }
 }
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .ambient-orb,
+  .body-silhouette,
+  .hero-grid::before,
+  .experience-strip {
+    display: none !important;
+  }
+
+  .trust-panel,
+  .map-card,
+  .workout-card,
+  .exercise-card,
+  .search-card,
+  .primer-card,
+  .source-card,
+  .redflag-card,
+  .prescription,
+  .rules-stack article {
+    background: white !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+}
