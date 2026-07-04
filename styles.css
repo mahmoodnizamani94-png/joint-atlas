@@ -1347,7 +1347,8 @@ svg {
 .prop,
 .block,
 .wheel,
-.bike-frame {
+.bike-frame,
+.towel {
   fill: none;
   stroke: rgba(30, 28, 26, 0.22);
   stroke-width: 4;
@@ -1359,6 +1360,11 @@ svg {
 .block {
   fill: rgba(76, 102, 88, 0.10);
   stroke: rgba(76, 102, 88, 0.18);
+}
+
+.towel {
+  fill: rgba(197, 163, 115, 0.18);
+  stroke: rgba(197, 163, 115, 0.36);
 }
 
 .wheel { stroke-width: 3; }
@@ -1427,6 +1433,7 @@ svg {
 @keyframes demo-lift { 0%, 100% { transform: translateY(0); } 45%, 55% { transform: translateY(-13px); } }
 @keyframes demo-rise { 0%, 100% { transform: translateY(0) rotate(0deg); } 48%, 58% { transform: translateY(-18px) rotate(-4deg); } }
 @keyframes demo-leg-raise { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-19deg); } }
+@keyframes demo-quad-press { 0%, 100% { transform: translateY(0); } 45%, 58% { transform: translateY(5px); } }
 @keyframes demo-slide { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-18px); } }
 @keyframes demo-open { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-24deg); } }
 @keyframes demo-step { 0%, 100% { transform: translate(0, 0); } 48%, 58% { transform: translate(18px, -19px); } }
@@ -1440,6 +1447,7 @@ svg {
 .demo-svg .body { animation: demo-float 4.8s ease-in-out infinite; }
 .demo-bridge .body { animation: demo-lift 3.4s cubic-bezier(0.36, 0, 0.2, 1) infinite; }
 .demo-chair .body { animation: demo-rise 3.8s cubic-bezier(0.38, 0, 0.2, 1) infinite; transform-origin: 112px 90px; }
+.demo-quad-set .active { animation: demo-quad-press 2.8s cubic-bezier(0.38, 0, 0.2, 1) infinite; }
 .demo-quad .active { animation: demo-leg-raise 3.2s cubic-bezier(0.38, 0, 0.2, 1) infinite; transform-origin: 148px 98px; }
 .demo-heel .active { animation: demo-slide 3.2s cubic-bezier(0.38, 0, 0.2, 1) infinite; }
 .demo-clam .active { animation: demo-open 3.2s cubic-bezier(0.38, 0, 0.2, 1) infinite; transform-origin: 102px 113px; }
