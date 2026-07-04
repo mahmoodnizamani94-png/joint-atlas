@@ -46,6 +46,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
   overflow-x: clip;
 }
 
@@ -53,6 +54,7 @@ body {
   font-family: var(--font-sans);
   color: var(--text-primary);
   background-color: var(--bg-base);
+  overflow-x: hidden;
   overflow-x: clip;
   line-height: 1.6;
 }
@@ -2221,6 +2223,7 @@ body {
   html,
   body {
     max-width: 100%;
+    overflow-x: hidden;
     overflow-x: clip;
   }
 
