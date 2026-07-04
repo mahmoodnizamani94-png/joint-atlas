@@ -31,8 +31,8 @@
   --radius-md: 12px;
   --radius-sm: 8px;
   
-  --font-serif: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   --container-max: 1180px;
 }
@@ -1308,149 +1308,163 @@ svg {
 }
 
 .exercise-visual {
-  height: 140px;
-  background: radial-gradient(circle at 30% 20%, #FAF8F5, #F4F2EE);
-  color: var(--text-primary);
+  position: relative;
+  min-height: 184px;
+  padding: 14px;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(197, 163, 115, 0.24), transparent 34%),
+    radial-gradient(circle at 78% 12%, rgba(76, 102, 88, 0.18), transparent 34%),
+    linear-gradient(145deg, #fffdfa 0%, #f3eee6 100%);
   display: grid;
   place-items: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(30, 28, 26, 0.08);
+  overflow: hidden;
+}
+
+.exercise-visual::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(197, 163, 115, 0.20);
+  border-radius: 24px;
+  pointer-events: none;
 }
 
 .exercise-visual svg {
-  width: 90px;
-  height: 90px;
-  color: var(--accent-green);
+  position: relative;
+  width: min(100%, 260px);
+  height: 174px;
+  filter: drop-shadow(0 20px 28px rgba(47, 38, 29, 0.10));
 }
 
-.motion-line, .motion-soft {
+.demo-room {
+  fill: rgba(255, 255, 255, 0.56);
+  stroke: rgba(30, 28, 26, 0.08);
+}
+
+.demo-horizon,
+.mat,
+.prop,
+.block,
+.wheel,
+.bike-frame {
   fill: none;
-  stroke: currentColor;
-  stroke-width: 5;
+  stroke: rgba(30, 28, 26, 0.22);
+  stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.motion-soft {
-  opacity: 0.25;
-  color: var(--text-secondary);
+.mat,
+.block {
+  fill: rgba(76, 102, 88, 0.10);
+  stroke: rgba(76, 102, 88, 0.18);
 }
 
-.motion-fill {
-  fill: currentColor;
-  opacity: 0.08;
+.wheel { stroke-width: 3; }
+.bike-frame { stroke: rgba(76, 102, 88, 0.42); }
+
+.head { fill: #a78263; }
+.torso,
+.arm,
+.leg,
+.foot {
+  fill: none;
+  stroke: #3f5c4d;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.motion-dot {
-  fill: currentColor;
+.arm,
+.leg { stroke-width: 7; }
+.rear { opacity: 0.34; }
+.front,
+.active { opacity: 1; }
+.active { stroke: var(--accent-gold); }
+
+.cue path,
+.cue circle {
+  fill: none;
+  stroke: var(--accent-terracotta);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-/* Vector Animations in CSS */
-@keyframes calf-raise {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.icon-calf .motion-line,
-.icon-calf .motion-dot,
-.icon-calf .motion-soft {
-  animation: calf-raise 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+.cue .target { fill: var(--accent-terracotta); stroke: rgba(255,255,255,0.9); stroke-width: 2; }
+.cue .nerve { stroke: #d49b6a; stroke-dasharray: 3 7; }
+.cue .spin { stroke: rgba(197, 163, 115, 0.72); stroke-dasharray: 9 8; }
+
+.demo-badge rect {
+  fill: rgba(30, 28, 26, 0.82);
 }
 
-@keyframes leg-raise {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-18deg); }
-}
-.icon-quad .motion-line:nth-of-type(2) {
-  animation: leg-raise 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transform-origin: 66px 94px;
-}
-
-@keyframes heel-slide {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-16px); }
-}
-.icon-heel .motion-line:nth-of-type(2) {
-  animation: heel-slide 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+.demo-badge text,
+.demo-title {
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  fill: rgba(250, 248, 245, 0.92);
 }
 
-@keyframes clamshell {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-22deg); }
-}
-.icon-clam .motion-line:nth-of-type(1) {
-  animation: clamshell 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transform-origin: 70px 91px;
+.demo-title {
+  font-size: 9px;
+  fill: rgba(30, 28, 26, 0.58);
 }
 
-@keyframes ankle-pump {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-12deg); }
-}
-.icon-ankle .motion-line:nth-of-type(1) {
-  animation: ankle-pump 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transform-origin: 53px 90px;
-}
-
-@keyframes cat-cow {
-  0%, 100% { transform: scaleY(1); }
-  50% { transform: scaleY(0.55); }
-}
-.icon-cat .motion-line {
-  animation: cat-cow 3.2s ease-in-out infinite;
-  transform-origin: center 80px;
+.body,
+.cue,
+.active,
+.front,
+.demo-badge {
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
-@keyframes sit-to-stand {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-16px); }
-}
-.icon-chair .motion-dot,
-.icon-chair .motion-line:nth-of-type(1) {
-  animation: sit-to-stand 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
+@keyframes demo-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes demo-lift { 0%, 100% { transform: translateY(0); } 45%, 55% { transform: translateY(-13px); } }
+@keyframes demo-rise { 0%, 100% { transform: translateY(0) rotate(0deg); } 48%, 58% { transform: translateY(-18px) rotate(-4deg); } }
+@keyframes demo-leg-raise { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-19deg); } }
+@keyframes demo-slide { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-18px); } }
+@keyframes demo-open { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-24deg); } }
+@keyframes demo-step { 0%, 100% { transform: translate(0, 0); } 48%, 58% { transform: translate(18px, -19px); } }
+@keyframes demo-calf { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes demo-sway { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(2.2deg); } }
+@keyframes demo-march { 0%, 100% { transform: rotate(0deg) translateY(0); } 50% { transform: rotate(-13deg) translateY(-5px); } }
+@keyframes demo-ankle { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(11deg); } }
+@keyframes demo-arc { 0%, 100% { opacity: 0.34; stroke-dashoffset: 22; } 50% { opacity: 1; stroke-dashoffset: 0; } }
+@keyframes demo-spin { to { transform: rotate(360deg); } }
 
-@keyframes march-knee {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-10deg); }
-}
-.icon-march .motion-line:nth-of-type(2) {
-  animation: march-knee 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transform-origin: 70px 82px;
-}
+.demo-svg .body { animation: demo-float 4.8s ease-in-out infinite; }
+.demo-bridge .body { animation: demo-lift 3.4s cubic-bezier(0.36, 0, 0.2, 1) infinite; }
+.demo-chair .body { animation: demo-rise 3.8s cubic-bezier(0.38, 0, 0.2, 1) infinite; transform-origin: 112px 90px; }
+.demo-quad .active { animation: demo-leg-raise 3.2s cubic-bezier(0.38, 0, 0.2, 1) infinite; transform-origin: 148px 98px; }
+.demo-heel .active { animation: demo-slide 3.2s cubic-bezier(0.38, 0, 0.2, 1) infinite; }
+.demo-clam .active { animation: demo-open 3.2s cubic-bezier(0.38, 0, 0.2, 1) infinite; transform-origin: 102px 113px; }
+.demo-step .body { animation: demo-step 3.5s cubic-bezier(0.36, 0, 0.2, 1) infinite; }
+.demo-calf .body { animation: demo-calf 3s ease-in-out infinite; }
+.demo-balance .body,
+.demo-default .body { animation: demo-sway 4.2s ease-in-out infinite; transform-origin: 92px 126px; }
+.demo-march .active { animation: demo-march 2.7s ease-in-out infinite; transform-origin: 94px 94px; }
+.demo-walk .body { animation: demo-sway 2.8s ease-in-out infinite; transform-origin: 92px 126px; }
+.demo-ankle .active,
+.demo-ankle .front { animation: demo-ankle 2.6s ease-in-out infinite; transform-origin: 135px 118px; }
+.demo-cat .active { animation: demo-float 3s ease-in-out infinite; }
+.demo-bike .spin { animation: demo-spin 2.8s linear infinite; transform-origin: 116px 112px; }
+.demo-svg .cue path:not(.arrow-head),
+.demo-svg .cue circle { animation: demo-arc 3s ease-in-out infinite; stroke-dasharray: 22 12; }
+.demo-svg .demo-badge { animation: demo-float 5.4s ease-in-out infinite; }
 
-@keyframes balance-sway {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(2.5deg); }
-}
-.icon-balance .motion-dot,
-.icon-balance .motion-line {
-  animation: balance-sway 4s ease-in-out infinite;
-  transform-origin: bottom center;
-}
-
-@keyframes walk-leg-1 {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-10deg); }
-}
-@keyframes walk-leg-2 {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(10deg); }
-}
-.icon-walk .motion-line:nth-of-type(1) {
-  animation: walk-leg-1 2.2s ease-in-out infinite;
-  transform-origin: 60px 49px;
-}
-.icon-walk .motion-line:nth-of-type(2) {
-  animation: walk-leg-2 2.2s ease-in-out infinite;
-  transform-origin: 54px 84px;
-}
-
-@keyframes bridge-lift {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-.icon-bridge .motion-line,
-.icon-bridge .motion-dot {
-  animation: bridge-lift 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+@media (prefers-reduced-motion: reduce) {
+  .demo-svg *,
+  .demo-svg .body,
+  .demo-svg .active,
+  .demo-svg .cue path,
+  .demo-svg .cue circle {
+    animation: none !important;
+  }
 }
 
 .exercise-content {
