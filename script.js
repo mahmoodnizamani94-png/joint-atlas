@@ -227,14 +227,17 @@ function renderExercises(filter = 'all', query = '') {
     'quad-set',
     'heel-slide',
     'straight-leg-raise',
-    'bridge'
+    'bridge',
+    'clamshell',
+    'side-hip-raise'
   ];
 
   grid.innerHTML = filtered.map(ex => {
     const visualHtml = videoExercises.includes(ex.id)
       ? `<video autoplay loop muted playsinline poster="assets/exercises/${ex.id}.webp" class="exercise-video">
            <source src="assets/exercises/${ex.id}.mp4" type="video/mp4">
-         </video>`
+         </video>
+         <span class="video-badge" aria-hidden="true">Motion Loop</span>`
       : `<img src="assets/exercises/${ex.id}.webp" alt="" loading="lazy" />`;
 
     return `

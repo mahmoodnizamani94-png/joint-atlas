@@ -2733,3 +2733,30 @@ body {
 .orb-two {
   animation-delay: -7s;
 }
+
+/* Elegant glassmorphic video loop badge */
+.video-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(197, 163, 115, 0.15);
+  backdrop-filter: blur(8px);
+  text-transform: uppercase;
+  z-index: 3;
+  opacity: 0.85;
+  transition: opacity 0.3s var(--transition), transform 0.3s var(--transition), background-color 0.3s var(--transition);
+}
+
+.exercise-card:hover .video-badge {
+  opacity: 1;
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(197, 163, 115, 0.1);
+}
