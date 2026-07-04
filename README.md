@@ -20,3 +20,7 @@ Upload this folder to any static host, including Netlify, Vercel, GitHub Pages, 
 ## Medical note
 
 The content is educational and does not replace a doctor, physical therapist, or emergency care. The website includes red flags for when to stop and seek help.
+
+---
+*Last updated: July 2026 (Redesign with home-friendly exercises, premium UI, and animated movement atlas).*
+
