@@ -232,6 +232,12 @@ function renderExercises(filter = 'all', query = '') {
   });
 
   count.textContent = `${filtered.length} of ${exercises.length} exercises shown`;
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="exercise-empty" role="status"><strong>No exercises found</strong><p>Try a broader body area or clear the search. The full library is still one tap away.</p></div>`;
+    return;
+  }
+
   grid.innerHTML = filtered.map(ex => `
     <article class="exercise-card" id="ex-${ex.id}">
       <div class="exercise-visual">${icon(ex.icon)}</div>
@@ -345,13 +351,31 @@ function init() {
   const search = document.getElementById('exerciseSearch');
   const chips = document.querySelectorAll('.filter-chip');
   let activeFilter = 'all';
-  chips.forEach(chip => chip.addEventListener('click', () => {
-    chips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    activeFilter = chip.dataset.filter;
-    renderExercises(activeFilter, search?.value || '');
-    document.getElementById('library')?.scrollIntoView({behavior:'smooth'});
-  }));
+  chips.forEach(chip => {
+    chip.setAttribute('aria-pressed', chip.classList.contains('active') ? 'true' : 'false');
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.classList.remove('active');
+        c.setAttribute('aria-pressed', 'false');
+      });
+      chip.classList.add('active');
+      chip.setAttribute('aria-pressed', 'true');
+      activeFilter = chip.dataset.filter;
+      renderExercises(activeFilter, search?.value || '');
+      document.getElementById('library')?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  document.getElementById('resetLibrary')?.addEventListener('click', () => {
+    activeFilter = 'all';
+    if (search) search.value = '';
+    chips.forEach(c => {
+      const active = c.dataset.filter === 'all';
+      c.classList.toggle('active', active);
+      c.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    renderExercises(activeFilter, '');
+  });
   search?.addEventListener('input', () => renderExercises(activeFilter, search.value));
 
   document.querySelectorAll('[data-area-trigger]').forEach(button => {
