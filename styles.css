@@ -1813,7 +1813,14 @@ svg {
   }
   
   .hero-grid, .plan-layout, .builder-grid, .library-top, .split-grid, .safety-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .builder-grid {
+    grid-template-areas:
+      "copy"
+      "board"
+      "prescription";
   }
   
   .sticky-heading, .builder-copy {
@@ -2476,6 +2483,14 @@ body {
   .split-grid,
   .safety-grid {
     gap: 26px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .builder-grid {
+    grid-template-areas:
+      "copy"
+      "board"
+      "prescription";
   }
 
   .phase-nav {
