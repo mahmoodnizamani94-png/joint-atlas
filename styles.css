@@ -1358,7 +1358,8 @@ svg {
   filter: drop-shadow(0 20px 28px rgba(47, 38, 29, 0.10));
 }
 
-.exercise-visual img {
+.exercise-visual img,
+.exercise-visual video {
   position: relative;
   width: calc(100% - 24px);
   height: calc(100% - 24px);
@@ -2682,10 +2683,12 @@ body {
 }
 
 /* Ken Burns Hover Zoom Effect on Exercise Images */
-.exercise-visual img {
+.exercise-visual img,
+.exercise-visual video {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
 }
-.exercise-card:hover .exercise-visual img {
+.exercise-card:hover .exercise-visual img,
+.exercise-card:hover .exercise-visual video {
   transform: scale(1.05);
 }
 

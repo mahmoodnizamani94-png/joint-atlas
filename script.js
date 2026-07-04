@@ -220,32 +220,50 @@ function renderExercises(filter = 'all', query = '') {
     return;
   }
 
-  grid.innerHTML = filtered.map(ex => `
-    <article class="exercise-card" id="ex-${ex.id}">
-      <div class="exercise-visual"><img src="assets/exercises/${ex.id}.webp" alt="" loading="lazy" /></div>
-      <div class="exercise-content">
-        <div class="tag-row">${ex.areas.map(area => `<span class="tag tag-${area}">${areaLabels[area]}</span>`).join('')}</div>
-        <h3>${ex.name}</h3>
-        <p class="exercise-why">${ex.why}</p>
-        
-        <div class="exercise-details">
-          <div class="detail-grid">
-            <div class="detail"><b>How</b><span>${ex.how}</span></div>
-            <div class="detail"><b>Dose</b><span>${ex.dose}</span></div>
-            <div class="detail"><b>Easier</b><span>${ex.easier}</span></div>
-            <div class="detail"><b>Harder</b><span>${ex.harder}</span></div>
-            <div class="detail"><b>Stop if</b><span>${ex.warning}</span></div>
+  const videoExercises = [
+    'easy-walk',
+    'indoor-march',
+    'stationary-bike',
+    'quad-set',
+    'heel-slide',
+    'straight-leg-raise',
+    'bridge'
+  ];
+
+  grid.innerHTML = filtered.map(ex => {
+    const visualHtml = videoExercises.includes(ex.id)
+      ? `<video autoplay loop muted playsinline poster="assets/exercises/${ex.id}.webp" class="exercise-video">
+           <source src="assets/exercises/${ex.id}.mp4" type="video/mp4">
+         </video>`
+      : `<img src="assets/exercises/${ex.id}.webp" alt="" loading="lazy" />`;
+
+    return `
+      <article class="exercise-card" id="ex-${ex.id}">
+        <div class="exercise-visual">${visualHtml}</div>
+        <div class="exercise-content">
+          <div class="tag-row">${ex.areas.map(area => `<span class="tag tag-${area}">${areaLabels[area]}</span>`).join('')}</div>
+          <h3>${ex.name}</h3>
+          <p class="exercise-why">${ex.why}</p>
+          
+          <div class="exercise-details">
+            <div class="detail-grid">
+              <div class="detail"><b>How</b><span>${ex.how}</span></div>
+              <div class="detail"><b>Dose</b><span>${ex.dose}</span></div>
+              <div class="detail"><b>Easier</b><span>${ex.easier}</span></div>
+              <div class="detail"><b>Harder</b><span>${ex.harder}</span></div>
+              <div class="detail"><b>Stop if</b><span>${ex.warning}</span></div>
+            </div>
+            <a class="demo-link" href="${ex.source}" target="_blank" rel="noreferrer">Trusted demo/source</a>
           </div>
-          <a class="demo-link" href="${ex.source}" target="_blank" rel="noreferrer">Trusted demo/source</a>
+          
+          <button class="btn-expand" type="button" aria-expanded="false">
+            <span>Show instructions</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
-        
-        <button class="btn-expand" type="button" aria-expanded="false">
-          <span>Show instructions</span>
-          <svg class="chevron-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-    </article>
-  `).join('');
+      </article>
+    `;
+  }).join('');
 
   grid.querySelectorAll('.btn-expand').forEach(btn => {
     btn.addEventListener('click', () => {
