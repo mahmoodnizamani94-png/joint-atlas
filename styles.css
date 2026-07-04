@@ -1027,42 +1027,63 @@ svg {
   background-color: transparent;
   border: 2px solid var(--text-secondary);
   border-radius: 50%;
-  transition: all var(--transition);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .checkbox-wrapper input:checked ~ .checkbox-custom {
   background-color: var(--accent-green);
   border-color: var(--accent-green);
+  box-shadow: 0 0 10px rgba(76, 102, 88, 0.2);
 }
 
 .checkbox-custom::after {
   content: "";
   position: absolute;
-  display: none;
   left: 6px;
   top: 2px;
   width: 4px;
   height: 9px;
   border: solid white;
   border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
 }
 
 .checkbox-wrapper input:checked ~ .checkbox-custom::after {
-  display: block;
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
 }
 
 .step-item label {
+  position: relative;
   font-weight: 500;
   font-size: 0.92rem;
   color: var(--text-primary);
   cursor: pointer;
   line-height: 1.35;
+  transition: color 0.3s var(--transition);
+}
+
+/* Premium strike-through animation with gold ink line */
+.step-item label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--accent-gold);
+  transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
 }
 
 .step-item.is-completed label {
-  text-decoration: line-through;
   color: var(--text-tertiary);
+}
+
+.step-item.is-completed label::after {
+  width: 100%;
 }
 
 .step-dose {
@@ -1334,6 +1355,15 @@ svg {
   position: relative;
   width: min(100%, 260px);
   height: 174px;
+  filter: drop-shadow(0 20px 28px rgba(47, 38, 29, 0.10));
+}
+
+.exercise-visual img {
+  position: relative;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  object-fit: cover;
+  border-radius: 20px;
   filter: drop-shadow(0 20px 28px rgba(47, 38, 29, 0.10));
 }
 
@@ -2628,4 +2658,75 @@ body {
   .filter-chip {
     flex-basis: 100%;
   }
+}
+
+/* ==========================================================================
+   Premium UI/UX Enhancements (Thinking Outside the Box)
+   ========================================================================== */
+
+/* Elegant Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 28, 26, 0.12);
+  border-radius: 99px;
+  transition: background 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* Ken Burns Hover Zoom Effect on Exercise Images */
+.exercise-visual img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+.exercise-card:hover .exercise-visual img {
+  transform: scale(1.05);
+}
+
+/* Premium Card hover highlight */
+.exercise-card {
+  transition: border-color 0.4s var(--transition), box-shadow 0.4s var(--transition), transform 0.4s var(--transition);
+}
+.exercise-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 20px 45px -15px rgba(197, 163, 115, 0.12), var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+/* Active filter state highlight */
+.filter-chip.active {
+  background-color: var(--accent-green) !important;
+  border-color: var(--accent-green) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px -4px rgba(76, 102, 88, 0.35);
+}
+
+/* Gold border glow on site header scroll state */
+.site-header.scrolled {
+  border-color: rgba(197, 163, 115, 0.25) !important;
+  box-shadow: 0 10px 30px -8px rgba(197, 163, 115, 0.08), var(--shadow-md);
+}
+
+/* Breath animation on ambient glowing background orbs */
+@keyframes orb-breathing {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.15);
+    opacity: 0.35;
+  }
+}
+.ambient-orb {
+  animation: orb-breathing 15s ease-in-out infinite alternate;
+}
+.orb-two {
+  animation-delay: -7s;
 }

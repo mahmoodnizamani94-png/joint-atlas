@@ -8,48 +8,7 @@ const sources = {
   arthritisWeight: 'https://www.arthritis.org/health-wellness/healthy-living/nutrition/weight-loss/oa-diagnosis-why-weight-loss-matters'
 };
 
-const icon = (type = 'default') => {
-  const figure = ({name, cls, props = '', body = '', cue = '', badge = 'Slow + controlled'}) => `
-    <svg viewBox="0 0 220 160" aria-hidden="true" class="demo-svg demo-${cls}">
-      <rect class="demo-room" x="8" y="8" width="204" height="144" rx="28"/>
-      <path class="demo-horizon" d="M24 118C64 108 104 109 138 117s45 12 62 4"/>
-      ${props}
-      <g class="body body-${cls}">
-        ${body}
-      </g>
-      <g class="cue cue-${cls}">${cue}</g>
-      <g class="demo-badge"><rect x="14" y="18" width="128" height="24" rx="12"/><text x="78" y="33.5" text-anchor="middle" textLength="104" lengthAdjust="spacingAndGlyphs">${badge}</text></g>
-      <text class="demo-title" x="110" y="146" text-anchor="middle">${name}</text>
-    </svg>`;
 
-  const person = {
-    standing: `<circle class="head" cx="92" cy="48" r="10"/><path class="torso" d="M92 59l2 35"/><path class="arm rear" d="M93 68l-23 12"/><path class="arm front" d="M96 69l24 7"/><path class="leg rear" d="M94 94l-22 34"/><path class="leg front" d="M94 94l31 31"/><path class="foot" d="M66 130h25M119 129h25"/>`,
-    chair: `<circle class="head" cx="91" cy="44" r="10"/><path class="torso" d="M91 56c5 14 12 24 22 33"/><path class="arm front" d="M99 68l25 8"/><path class="leg rear" d="M112 90l-31 10"/><path class="leg front" d="M112 90l23 25"/><path class="foot" d="M73 102h26M130 118h25"/>`,
-    floor: `<circle class="head" cx="62" cy="88" r="10"/><path class="torso" d="M73 91c25-12 51-10 76 6"/><path class="arm rear" d="M91 94l-19 20"/><path class="leg rear" d="M146 98l-22 29"/><path class="leg front" d="M147 98l34 26"/><path class="foot" d="M116 130h26M176 127h24"/>`,
-    side: `<circle class="head" cx="56" cy="89" r="10"/><path class="torso" d="M67 93c25 8 48 16 70 31"/><path class="leg rear" d="M102 113l47 12"/><path class="leg front" d="M102 113l48-28"/><path class="foot" d="M145 128h36M145 83h28"/>`,
-    quadruped: `<circle class="head" cx="55" cy="81" r="10"/><path class="torso" d="M67 84c30-24 62-24 94-2"/><path class="arm front" d="M79 93l-17 38"/><path class="arm rear" d="M137 93l18 36"/><path class="foot" d="M51 132h29M145 132h34"/>`
-  };
-
-  const icons = {
-    quadSet: figure({name:'quad press-down', cls:'quad-set', props:'<rect class="mat" x="32" y="121" width="156" height="8" rx="4"/><rect class="towel" x="120" y="111" width="34" height="12" rx="6"/>', body:`${person.floor}<path class="leg active" d="M146 98l43 24"/><path class="foot active" d="M183 125h21"/>`, cue:'<path class="down" d="M143 99v22"/><path class="arrow-head" d="M135 113l8 8 8-8"/><circle class="target" cx="143" cy="119" r="4"/>', badge:'Press + hold'}),
-    quad: figure({name:'straight leg raise', cls:'quad', props:'<rect class="mat" x="32" y="121" width="156" height="8" rx="4"/>', body:`${person.floor}<path class="leg active" d="M148 98l43-34"/><path class="foot active" d="M185 61h20"/>`, cue:'<path class="arc" d="M147 98c11-19 24-31 42-37"/><circle class="target" cx="190" cy="61" r="4"/>'}),
-    heel: figure({name:'heel slide', cls:'heel', props:'<rect class="mat" x="32" y="121" width="156" height="8" rx="4"/>', body:`${person.floor}<path class="leg active" d="M146 98c21 0 33 8 39 24"/><path class="foot active" d="M177 125h21"/>`, cue:'<path class="arrow" d="M174 118c-20 1-34 1-52 0"/><path class="arrow-head" d="M128 111l-9 7 9 7"/>'}),
-    bridge: figure({name:'glute bridge', cls:'bridge', props:'<rect class="mat" x="28" y="123" width="166" height="8" rx="4"/>', body:`${person.floor}`, cue:'<path class="lift" d="M76 88c35-31 72-27 100 23"/><path class="up" d="M118 87v-24"/><path class="arrow-head" d="M110 70l8-8 8 8"/>'}),
-    clam: figure({name:'clamshell', cls:'clam', props:'<rect class="mat" x="34" y="125" width="154" height="8" rx="4"/>', body:`${person.side}`, cue:'<path class="arc" d="M102 113c11-21 27-32 48-31"/><circle class="target" cx="150" cy="84" r="4"/>'}),
-    chair: figure({name:'sit to stand', cls:'chair', props:'<path class="prop" d="M143 64h36v66M143 91h37"/>', body:`${person.chair}`, cue:'<path class="up" d="M103 85V55"/><path class="arrow-head" d="M95 63l8-8 8 8"/>'}),
-    step: figure({name:'low step up', cls:'step', props:'<path class="block" d="M134 126V94h36V68h34v58z"/>', body:`${person.standing}<path class="leg active" d="M94 94l44 0"/><path class="foot active" d="M132 97h27"/>`, cue:'<path class="arrow" d="M113 109c18-18 30-27 50-29"/><path class="arrow-head" d="M153 75l11 4-5 10"/>'}),
-    calf: figure({name:'calf raise', cls:'calf', props:'<path class="prop" d="M159 35v92"/>', body:`${person.standing}`, cue:'<path class="up" d="M92 116V91"/><path class="arrow-head" d="M84 99l8-8 8 8"/>'}),
-    balance: figure({name:'single-leg balance', cls:'balance', props:'<path class="prop" d="M159 35v92"/>', body:`${person.standing}<path class="leg active" d="M94 94l35 5"/>`, cue:'<path class="sway" d="M80 35c-10 8-10 22 0 30M108 34c10 8 10 23 0 31"/>'}),
-    back: figure({name:'spine / nerve calm', cls:'back', props:'<rect class="mat" x="30" y="121" width="160" height="8" rx="4"/>', body:`${person.floor}`, cue:'<path class="nerve" d="M144 99c18 12 28 22 42 29"/><circle class="target" cx="186" cy="128" r="4"/>'}),
-    cat: figure({name:'cat-cow / bird dog', cls:'cat', props:'<rect class="mat" x="32" y="130" width="156" height="8" rx="4"/>', body:`${person.quadruped}<path class="leg active" d="M160 83l33-23"/><path class="arm active" d="M76 93L42 66"/>`, cue:'<path class="arc" d="M69 82c29-19 58-19 88 0"/>'}),
-    walk: figure({name:'easy walk', cls:'walk', body:`${person.standing}`, cue:'<path class="arrow" d="M132 125c15 0 27-3 38-10"/><path class="arrow-head" d="M161 109l10 5-7 9"/>', badge:'soft steps'}),
-    march: figure({name:'low-impact march', cls:'march', body:`${person.standing}<path class="leg active" d="M94 94l31-13v27"/>`, cue:'<path class="up" d="M126 107V78"/><path class="arrow-head" d="M118 86l8-8 8 8"/>', badge:'no jumping'}),
-    ankle: figure({name:'ankle control', cls:'ankle', props:'<path class="prop" d="M145 36v92"/>', body:`${person.chair}`, cue:'<path class="arc" d="M134 116c14-12 27-12 39 0"/><path class="arrow-head" d="M165 107l9 7-10 6"/>'}),
-    bike: figure({name:'stationary bike', cls:'bike', props:'<circle class="wheel" cx="73" cy="112" r="24"/><circle class="wheel" cx="151" cy="112" r="24"/><path class="bike-frame" d="M73 112l34-35 44 35h-49l-29 0M107 77l9 35M121 66h25"/>', body:'<circle class="head" cx="102" cy="35" r="10"/><path class="torso" d="M103 47l14 31"/><path class="arm front" d="M112 59l31 10"/><path class="leg active" d="M116 78l-9 34"/><path class="leg rear" d="M116 78l35 34"/>', cue:'<path class="spin" d="M96 112a20 20 0 1 0 40 0a20 20 0 1 0-40 0"/>'}),
-    default: figure({name:'controlled movement', cls:'default', body:`${person.standing}`, cue:'<path class="sway" d="M78 35c-9 8-9 22 0 30M109 34c10 8 10 23 0 31"/>'})
-  };
-  return icons[type] || icons.default;
-};
 
 const exercises = [
   {id:'easy-walk', name:'Easy walk', areas:['knee','hip','ankle','sciatica','cardio'], icon:'walk', why:'Warms the body and builds stamina without heavy pounding.', how:'Walk on flat ground. Keep steps short and smooth. Stop before limping starts.', dose:'5–25 minutes', easier:'Walk indoors or break into 3–5 minute blocks.', harder:'Add 2–3 minutes per week.', warning:'Avoid hills if knee, hip, or sciatica pain flares.', source:sources.arthritisOA},
@@ -116,7 +75,7 @@ const workouts = [
     ]
   },
   {
-    id:'workout-d', label:'Workout D', title:'Low-Impact Home Cardio', purpose:'Best for overweight patients, sore joint days, and building fitness in your living room.',
+    id:'workout-d', label:'Workout D', title:'Low-Impact Home Cardio', purpose:'Best for joint-friendly cardio, sore joint days, and building fitness in your living room.',
     steps:[
       ['Warm-up', 'Gentle pacing or slow marching', '5 min'],
       ['Main cardio', 'Low-impact indoor marching or stationary cycling', '8–25 min'],
@@ -263,7 +222,7 @@ function renderExercises(filter = 'all', query = '') {
 
   grid.innerHTML = filtered.map(ex => `
     <article class="exercise-card" id="ex-${ex.id}">
-      <div class="exercise-visual">${icon(ex.icon)}</div>
+      <div class="exercise-visual"><img src="assets/exercises/${ex.id}.webp" alt="" loading="lazy" /></div>
       <div class="exercise-content">
         <div class="tag-row">${ex.areas.map(area => `<span class="tag tag-${area}">${areaLabels[area]}</span>`).join('')}</div>
         <h3>${ex.name}</h3>

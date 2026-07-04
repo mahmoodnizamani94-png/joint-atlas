@@ -1,6 +1,6 @@
 # JointAtlas — Complete Cartilage & Sciatica-Friendly Movement Plan
 
-A polished static website for a complete non-surgical, cartilage-friendly movement plan. It is designed for a late-40s overweight patient and covers knee, hip, ankle/foot, and low-back/sciatica-type leg pain patterns.
+A polished static website for a complete non-surgical, cartilage-friendly movement plan. It covers knee, hip, ankle/foot, and low-back/sciatica-type leg pain patterns.
 
 ## Files
 

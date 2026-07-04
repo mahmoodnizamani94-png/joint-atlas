@@ -16,8 +16,8 @@ The website is an educational, non-surgical exercise guide. It uses conservative
 
 1. Treat cartilage issues as joint-load problems, not just tissue-name problems.
 2. Separate joint patterns from nerve/sciatica patterns using a simple pain map.
-3. Prefer low-impact cardio for overweight patients: low-impact indoor marching, stationary cycling, elliptical, and flat walking.
+3. Prefer joint-friendly, low-impact cardio: low-impact indoor marching, stationary cycling, elliptical, and flat walking.
 4. Strengthen the support system around joints: quadriceps, glutes, hips, hamstrings, calves, feet/ankles, and core.
 5. Progress based on symptoms and next-day response.
-6. Avoid shame-based weight language; frame weight loss as joint-load reduction if relevant.
+6. Avoid shame-based language; frame exercise as joint-load management and capacity building.
 7. Make red flags obvious.
