@@ -18,7 +18,7 @@ const icon = (type = 'default') => {
         ${body}
       </g>
       <g class="cue cue-${cls}">${cue}</g>
-      <g class="demo-badge"><rect x="18" y="18" width="82" height="23" rx="11.5"/><text x="59" y="33" text-anchor="middle">${badge}</text></g>
+      <g class="demo-badge"><rect x="14" y="18" width="128" height="24" rx="12"/><text x="78" y="33.5" text-anchor="middle" textLength="104" lengthAdjust="spacingAndGlyphs">${badge}</text></g>
       <text class="demo-title" x="110" y="146" text-anchor="middle">${name}</text>
     </svg>`;
 

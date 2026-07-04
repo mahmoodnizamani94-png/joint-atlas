@@ -5,7 +5,7 @@ A polished static website for a complete non-surgical, cartilage-friendly moveme
 ## Files
 
 - `index.html` — main website
-- `styles.css` — full responsive UI system, print styles, premium visual design
+- `styles.css` — full responsive UI system, print styles, polished visual design
 - `script.js` — exercise library, filters, workout checklist, phase tabs, decision system
 - `sources.md` — source notes and demo links
 
@@ -22,5 +22,5 @@ Upload this folder to any static host, including Netlify, Vercel, GitHub Pages, 
 The content is educational and does not replace a doctor, physical therapist, or emergency care. The website includes red flags for when to stop and seek help.
 
 ---
-*Last updated: July 2026 (Redesign with home-friendly exercises, premium UI, and animated movement atlas).*
+*Last updated: July 2026 (Redesign with home-friendly exercises, refined UI, and animated movement atlas).*
 
