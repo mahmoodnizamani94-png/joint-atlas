@@ -3,363 +3,407 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A complete cartilage and sciatica-friendly, non-surgical movement plan: strength workouts, low-impact cardio, pain rules, demos, and progression." />
-  <meta name="theme-color" content="#1A1816" />
-  <title>JointAtlas — Complete Cartilage & Sciatica-Friendly Plan</title>
+  <meta name="description" content="A clinically grounded, cartilage- and sciatica-friendly movement plan with guided sessions, low-impact exercise, progression rules, and safety guidance." />
+  <meta name="theme-color" content="#153a32" />
+  <title>JointAtlas — A calmer way back to movement</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650;6..72,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main guide</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="ambient-orb orb-one" aria-hidden="true"></div>
-  <div class="ambient-orb orb-two" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to the movement guide</a>
+  <div class="page-texture" aria-hidden="true"></div>
   <div class="scroll-meter" id="scrollMeter" aria-hidden="true"></div>
 
   <header class="site-header" id="siteHeader">
-    <div class="container nav-shell">
+    <div class="nav-shell">
       <a class="brand" href="#top" aria-label="JointAtlas home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><path d="M11 27c8-1 10-9 18-8 5 1 8 4 8 9 0 6-5 10-11 10-11 0-16-10-16-19C10 10 17 4 25 4c6 0 11 3 14 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M8 28.5c8.5 0 10.3-10.3 19.2-10.3 7 0 12.8 5.4 12.8 12.3 0 7-5.8 12.5-12.9 12.5C15.2 43 8 33.7 8 22.2 8 12.8 15.7 5 25.2 5 32.7 5 39 9.4 42 15.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="26.8" cy="30.5" r="3.2" fill="currentColor"/>
+          </svg>
         </span>
-        <span>
+        <span class="brand-copy">
           <strong>JointAtlas</strong>
-          <small>Cartilage + sciatica-friendly movement</small>
+          <small>Movement planning system</small>
         </span>
       </a>
 
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#diagnosis-map">Pain map</a>
-        <a href="#weekly-plan">Plan</a>
-        <a href="#workouts">Workouts</a>
-        <a href="#library">Exercises</a>
+        <a href="#weekly-plan">12-week plan</a>
+        <a href="#workouts">Sessions</a>
+        <a href="#library">Exercise atlas</a>
         <a href="#safety">Safety</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="btn ghost small" type="button" id="openPrimer">Clear guide</button>
-        <button class="btn primary small" type="button" id="printBtn">Print</button>
-        <button class="menu-button" type="button" id="menuButton" aria-expanded="false" aria-controls="mobileNav">
-          <span></span><span></span><span></span><span class="sr-only">Menu</span>
+        <button class="text-action" type="button" id="openPrimer">Plain-language guide</button>
+        <button class="btn btn-dark btn-small" type="button" id="printBtn">Print plan</button>
+        <button class="menu-button" type="button" id="menuButton" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+          <span></span><span></span>
         </button>
       </div>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
       <a href="#diagnosis-map">Pain map</a>
-      <a href="#weekly-plan">Plan</a>
-      <a href="#workouts">Workouts</a>
-      <a href="#library">Exercises</a>
+      <a href="#weekly-plan">12-week plan</a>
+      <a href="#workouts">Sessions</a>
+      <a href="#library">Exercise atlas</a>
       <a href="#safety">Safety</a>
-      <button class="btn ghost" type="button" id="openPrimerMobile">Clear guide</button>
+      <button class="text-action" type="button" id="openPrimerMobile">Open plain-language guide</button>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="container hero-grid">
+      <div class="container hero-layout">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span>Complete non-surgical guide • lower body + spine • beginner-safe</p>
-          <h1>A clinically grounded movement plan for <span class="italic">sore joints</span>, cartilage irritation, and sciatica.</h1>
-          <p class="lede">A complete non-surgical guide for knee, hip, ankle/foot, and spine/sciatica patterns. This program integrates joint-friendly cardio, strength workouts, structured progression, and safety rules into a clear, easy-to-follow plan.</p>
+          <div class="hero-kicker">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>Lower body + spine</span>
+            <span aria-hidden="true">/</span>
+            <span>12-week progression</span>
+          </div>
+          <h1>A calmer way back to <em>movement.</em></h1>
+          <p class="hero-lede">A practical, clinically grounded guide for sore knees, hips, ankles, and sciatica-type symptoms—designed to answer one useful question first: <strong>what should I do today?</strong></p>
           <div class="hero-actions">
-            <a class="btn primary" href="#weekly-plan">Start the 12-week plan</a>
-            <a class="btn secondary" href="#session-builder">Choose today’s session</a>
+            <a class="btn btn-primary" href="#session-builder">Build today’s session</a>
+            <a class="btn btn-quiet" href="#weekly-plan">Explore the full plan <span aria-hidden="true">↘</span></a>
           </div>
-          <div class="trust-panel" aria-label="Plan summary">
-            <div><strong>24</strong><span>named exercises</span></div>
-            <div><strong>4</strong><span>guided workouts</span></div>
-            <div><strong>12</strong><span>week progression</span></div>
-          </div>
+          <dl class="hero-facts" aria-label="Plan overview">
+            <div><dt>24</dt><dd>guided exercises</dd></div>
+            <div><dt>4</dt><dd>repeatable sessions</dd></div>
+            <div><dt>12</dt><dd>weeks of progression</dd></div>
+          </dl>
         </div>
 
-        <aside class="signal-card reveal delay-1" aria-label="Today decision card">
-          <div class="body-silhouette" aria-hidden="true"><span></span><i></i><b></b></div>
-          <div class="signal-top">
-            <span class="capsule">Today’s rule</span>
-            <span class="dotline" aria-hidden="true"></span>
+        <aside class="atlas-panel reveal delay-1" aria-label="JointAtlas body map">
+          <div class="atlas-topline">
+            <span>Movement atlas</span>
+            <span>JA / 01</span>
           </div>
-          <h2>Train the body. Do not punish the joint.</h2>
-          <p>Use symptoms as the steering wheel. Mild discomfort is okay. Sharp pain, spreading numbness, swelling, or limping means change the plan.</p>
-          <div class="traffic-grid" role="list">
-            <div class="traffic green" role="listitem"><strong>Green</strong><span>0–3/10 pain<br>continue</span></div>
-            <div class="traffic amber" role="listitem"><strong>Amber</strong><span>4–5/10 pain<br>make easier</span></div>
-            <div class="traffic red" role="listitem"><strong>Red</strong><span>sharp / numb / swollen<br>stop</span></div>
+          <div class="atlas-visual" aria-hidden="true">
+            <svg viewBox="0 0 520 620" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="bodyFade" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#F7F5EF" stop-opacity=".98"/>
+                  <stop offset="1" stop-color="#C9D8D1" stop-opacity=".74"/>
+                </linearGradient>
+                <filter id="softGlow"><feGaussianBlur stdDeviation="10"/></filter>
+              </defs>
+              <g class="contours" fill="none" stroke="currentColor" opacity=".13">
+                <ellipse cx="260" cy="312" rx="218" ry="265"/>
+                <ellipse cx="260" cy="312" rx="180" ry="226"/>
+                <ellipse cx="260" cy="312" rx="145" ry="186"/>
+                <ellipse cx="260" cy="312" rx="109" ry="144"/>
+              </g>
+              <g class="body-form" fill="none" stroke="url(#bodyFade)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="260" cy="86" r="34" stroke-width="8"/>
+                <path d="M260 122v126m-68-76c20-20 43-30 68-30s48 10 68 30M222 236l-34 100m110-100 34 100M260 248l-54 126-14 150m68-276 54 126 14 150"/>
+                <path d="M215 366c28 20 62 20 90 0" stroke-width="7"/>
+              </g>
+              <g class="spine-line" fill="none" stroke="#C9D77B" stroke-width="3" stroke-linecap="round">
+                <path d="M260 134c-8 32 7 54-1 84-8 32 7 52 0 85"/>
+              </g>
+              <g class="atlas-node spine-node"><circle cx="260" cy="222" r="18"/><circle cx="260" cy="222" r="5"/></g>
+              <g class="atlas-node hip-node"><circle cx="260" cy="356" r="20"/><circle cx="260" cy="356" r="5"/></g>
+              <g class="atlas-node knee-node"><circle cx="206" cy="414" r="18"/><circle cx="206" cy="414" r="5"/></g>
+              <g class="atlas-node ankle-node"><circle cx="192" cy="526" r="17"/><circle cx="192" cy="526" r="5"/></g>
+              <g class="atlas-label label-spine"><path d="M278 222h98"/><text x="388" y="227">SPINE / NERVE</text></g>
+              <g class="atlas-label label-hip"><path d="M280 356h88"/><text x="380" y="361">HIP</text></g>
+              <g class="atlas-label label-knee"><path d="M188 414H92"/><text x="22" y="419">KNEE</text></g>
+              <g class="atlas-label label-ankle"><path d="M174 526H94"/><text x="30" y="531">ANKLE</text></g>
+            </svg>
           </div>
-          <div class="mini-note">
-            <strong>Best first move:</strong> easy walk, bike, or low-impact indoor march for 5–10 minutes, then strength.
+          <div class="atlas-caption">
+            <span>01</span>
+            <p>Start with how symptoms behave—not the body-part label alone.</p>
           </div>
         </aside>
       </div>
+
+      <div class="container planner-shell reveal" id="session-builder">
+        <div class="planner-intro">
+          <span class="section-index">TODAY / 60 SEC</span>
+          <div>
+            <p class="eyebrow">Quick session selector</p>
+            <h2>What does today feel like?</h2>
+          </div>
+          <p>Choose the closest pattern. You will get a focused session, a clear stop rule, and no pressure to “push through.”</p>
+        </div>
+        <div class="decision-board" role="group" aria-label="Choose today's symptom pattern">
+          <button class="decision" data-decision="calm" type="button" aria-pressed="false">
+            <span class="decision-code">01</span>
+            <span class="decision-copy"><strong>Painful or stiff</strong><small>Sore, swollen, guarded, or low-energy</small></span>
+            <span class="decision-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="decision" data-decision="normal" type="button" aria-pressed="false">
+            <span class="decision-code">02</span>
+            <span class="decision-copy"><strong>Mild and stable</strong><small>A normal day with room to build strength</small></span>
+            <span class="decision-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="decision" data-decision="nerve" type="button" aria-pressed="false">
+            <span class="decision-code">03</span>
+            <span class="decision-copy"><strong>Shooting down the leg</strong><small>Burning, tingling, numbness, or radiating pain</small></span>
+            <span class="decision-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <article class="prescription" id="dailyPrescription" aria-live="polite"></article>
+      </div>
     </section>
 
-    <section class="section-slim intelligence-panel" aria-label="Personalized plan intelligence">
-      <div class="container intelligence-grid reveal">
-        <article class="intelligence-card primary-intel">
-          <span class="intel-kicker">Start here</span>
-          <h2>Your 60-second plan check</h2>
-          <p>Choose symptoms, pick the matching session, then leave with a clear stop rule. The page behaves like a calm rehab concierge instead of a PDF.</p>
+    <section class="principles" aria-label="How the plan works">
+      <div class="container principles-grid reveal">
+        <article>
+          <span>01</span>
+          <h3>Symptom-led</h3>
+          <p>Choose by pain behavior, not jargon or guesswork.</p>
         </article>
-        <article class="intelligence-card">
-          <span class="intel-number">01</span>
-          <strong>Scan pain behavior</strong>
-          <small>Joint, nerve, swelling, or next-day response.</small>
+        <article>
+          <span>02</span>
+          <h3>Low-friction</h3>
+          <p>Know the next safe action in under a minute.</p>
         </article>
-        <article class="intelligence-card">
-          <span class="intel-number">02</span>
-          <strong>Select today</strong>
-          <small>Calm day, strength day, or nerve-friendly day.</small>
+        <article>
+          <span>03</span>
+          <h3>Progressive</h3>
+          <p>Earn the next step through a calm next-day response.</p>
         </article>
-        <article class="intelligence-card">
-          <span class="intel-number">03</span>
-          <strong>Progress only if earned</strong>
-          <small>One variable at a time, no heroic flare-ups.</small>
+        <article class="principle-quote">
+          <p>Train the body.<br><em>Do not punish the joint.</em></p>
         </article>
       </div>
     </section>
 
-    <section class="plain-panel section-slim" id="plain-English" hidden>
-      <div class="container">
-        <div class="primer-card">
-          <button class="close-primer" id="closePrimer" type="button" aria-label="Close clear guide">×</button>
-          <p class="eyebrow"><span></span>Clear guide</p>
-          <h2>The plan in clear, practical terms</h2>
-          <div class="plain-grid">
-            <article><b>Cartilage</b><p>Cartilage is cushion material. It helps joints move smoothly.</p></article>
-            <article><b>Sciatica</b><p>Sciatica is irritation of a nerve that often starts in the lower back and travels into the leg.</p></article>
-            <article><b>Exercise goal</b><p>Make the muscles stronger so the joint and nerve have less stress.</p></article>
-            <article><b>Best style</b><p>Slow, low-impact, controlled exercises that are easy to repeat consistently.</p></article>
-          </div>
+    <dialog class="primer-dialog" id="plain-English" aria-labelledby="primerTitle">
+      <div class="primer-card">
+        <div class="primer-header">
+          <span class="section-index">PLAIN LANGUAGE / 01</span>
+          <button class="icon-button" id="closePrimer" type="button" aria-label="Close plain-language guide">×</button>
+        </div>
+        <p class="eyebrow">No clinical shorthand</p>
+        <h2 id="primerTitle">The plan in clear, practical terms.</h2>
+        <div class="plain-grid">
+          <article><span>01</span><b>Cartilage</b><p>Cushion material that helps joints move smoothly.</p></article>
+          <article><span>02</span><b>Sciatica</b><p>Nerve irritation that often begins in the low back and travels into the leg.</p></article>
+          <article><span>03</span><b>The goal</b><p>Build support around the joint and nerve without provoking a flare-up.</p></article>
+          <article><span>04</span><b>The method</b><p>Slow, low-impact, repeatable movement with a clear next-day check.</p></article>
         </div>
       </div>
-    </section>
+    </dialog>
 
     <section class="section" id="diagnosis-map">
       <div class="container">
-        <div class="section-heading center reveal">
-          <p class="eyebrow"><span></span>Step 1</p>
-          <h2>Start with the pain map, not the body part name.</h2>
-          <p>Cartilage pain and nerve pain can both show up in the leg, but they behave differently. Use this section to choose the right emphasis for the workouts.</p>
-        </div>
-
-        <div class="experience-strip reveal delay-1" aria-label="Experience principles">
-          <article><span>01</span><strong>Symptom-led</strong><small>The interface starts from how pain behaves, not jargon.</small></article>
-          <article><span>02</span><strong>Low-friction</strong><small>Every session is selectable in under ten seconds.</small></article>
-          <article><span>03</span><strong>Progressive</strong><small>The plan rewards consistency over intensity.</small></article>
-        </div>
+        <header class="section-heading split-heading reveal">
+          <div>
+            <span class="section-index">01 / ORIENTATION</span>
+            <p class="eyebrow">Pain map</p>
+            <h2>Read the pattern before choosing the movement.</h2>
+          </div>
+          <p>Joint irritation and nerve pain can both appear in the leg, but they respond differently. Pick the pattern that sounds most like your day.</p>
+        </header>
 
         <div class="map-grid reveal delay-1">
-          <article class="map-card" data-filter="knee">
-            <div class="map-icon knee" aria-hidden="true"></div>
-            <h3>Knee cartilage / meniscus pattern</h3>
-            <p>Pain around the knee. Worse with stairs, squats, twisting, or standing from a low chair. May swell, click, catch, or feel stiff.</p>
-            <button class="link-button" data-area-trigger="knee" type="button">Show knee-safe exercises</button>
+          <article class="map-card map-knee" data-filter="knee">
+            <div class="map-card-top"><span class="map-number">01</span><span class="map-status">LOCAL / JOINT</span></div>
+            <div class="map-icon knee" aria-hidden="true"><i></i></div>
+            <h3>Knee cartilage or meniscus pattern</h3>
+            <p>Pain around the knee, often worse with stairs, squats, twisting, or rising from a low chair. It may swell, click, catch, or feel stiff.</p>
+            <button class="link-button" data-area-trigger="knee" type="button">View knee-safe movements <span aria-hidden="true">↗</span></button>
           </article>
-          <article class="map-card" data-filter="hip">
-            <div class="map-icon hip" aria-hidden="true"></div>
+          <article class="map-card map-hip" data-filter="hip">
+            <div class="map-card-top"><span class="map-number">02</span><span class="map-status">DEEP / JOINT</span></div>
+            <div class="map-icon hip" aria-hidden="true"><i></i></div>
             <h3>Hip cartilage pattern</h3>
-            <p>Deep ache in groin, side hip, buttock, or thigh. Worse after walking, standing, stairs, or getting out of a car.</p>
-            <button class="link-button" data-area-trigger="hip" type="button">Show hip-support exercises</button>
+            <p>A deep ache in the groin, side hip, buttock, or thigh—often worse after walking, standing, stairs, or getting out of a car.</p>
+            <button class="link-button" data-area-trigger="hip" type="button">View hip-support movements <span aria-hidden="true">↗</span></button>
           </article>
-          <article class="map-card" data-filter="ankle">
-            <div class="map-icon ankle" aria-hidden="true"></div>
-            <h3>Ankle / foot cartilage pattern</h3>
-            <p>Pain around ankle or foot joints. Worse with long standing, uneven ground, steps, or shoes with poor support.</p>
-            <button class="link-button" data-area-trigger="ankle" type="button">Show ankle-friendly exercises</button>
+          <article class="map-card map-ankle" data-filter="ankle">
+            <div class="map-card-top"><span class="map-number">03</span><span class="map-status">LOAD / JOINT</span></div>
+            <div class="map-icon ankle" aria-hidden="true"><i></i></div>
+            <h3>Ankle or foot cartilage pattern</h3>
+            <p>Pain around the ankle or foot joints, commonly worse with long standing, uneven ground, steps, or poorly supportive shoes.</p>
+            <button class="link-button" data-area-trigger="ankle" type="button">View ankle-friendly movements <span aria-hidden="true">↗</span></button>
           </article>
-          <article class="map-card" data-filter="sciatica">
-            <div class="map-icon nerve" aria-hidden="true"></div>
-            <h3>Sciatica / back-disc pattern</h3>
-            <p>Pain, tingling, burning, or numbness traveling from low back or butt down the leg. Often worse sitting, bending, coughing, or lifting.</p>
-            <button class="link-button" data-area-trigger="sciatica" type="button">Show nerve-friendly exercises</button>
+          <article class="map-card map-nerve" data-filter="sciatica">
+            <div class="map-card-top"><span class="map-number">04</span><span class="map-status">TRAVELING / NERVE</span></div>
+            <div class="map-icon nerve" aria-hidden="true"><i></i></div>
+            <h3>Sciatica or back-disc pattern</h3>
+            <p>Burning, tingling, numbness, or pain traveling from the low back or buttock down the leg—often worse sitting, bending, coughing, or lifting.</p>
+            <button class="link-button" data-area-trigger="sciatica" type="button">View nerve-friendly movements <span aria-hidden="true">↗</span></button>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section contrast" id="weekly-plan">
+    <section class="section plan-section" id="weekly-plan">
       <div class="container plan-layout">
-        <div class="section-heading sticky-heading reveal">
-          <p class="eyebrow"><span></span>Step 2</p>
-          <h2>The complete 12-week plan.</h2>
-          <p>This is the backbone of the website. It combines joint-friendly strength, low-impact cardio, spine/nerve calming, mobility, and weight-friendly progression.</p>
+        <header class="section-heading sticky-heading reveal">
+          <span class="section-index light-index">02 / THE SYSTEM</span>
+          <p class="eyebrow light">12-week plan</p>
+          <h2>Build capacity without chasing intensity.</h2>
+          <p>The plan moves from calming symptoms, to building support, to using that strength in real life. Progress only one variable at a time.</p>
           <div class="phase-nav" role="tablist" aria-label="Training phases">
-            <button class="phase-tab active" role="tab" aria-selected="true" data-phase="phase1">Weeks 1–2</button>
-            <button class="phase-tab" role="tab" aria-selected="false" data-phase="phase2">Weeks 3–6</button>
-            <button class="phase-tab" role="tab" aria-selected="false" data-phase="phase3">Weeks 7–12</button>
+            <button class="phase-tab active" role="tab" aria-selected="true" aria-controls="phase1" data-phase="phase1"><span>01</span> Weeks 1–2</button>
+            <button class="phase-tab" role="tab" aria-selected="false" aria-controls="phase2" data-phase="phase2"><span>02</span> Weeks 3–6</button>
+            <button class="phase-tab" role="tab" aria-selected="false" aria-controls="phase3" data-phase="phase3"><span>03</span> Weeks 7–12</button>
           </div>
-        </div>
+        </header>
 
         <div class="phase-stage reveal delay-1">
           <article class="phase-card active" id="phase1" role="tabpanel">
-            <span class="phase-number">01</span>
+            <div class="phase-card-head"><span>PHASE 01</span><span>2 WEEKS</span></div>
             <h3>Calm + control</h3>
-            <p>Goal: reduce fear, reduce flare-ups, learn the movements, and stop the cycle of pain → rest → weakness → more pain.</p>
-            <ul class="clean-list">
-              <li><strong>Strength:</strong> 2–3 days/week, easy range only.</li>
-              <li><strong>Cardio:</strong> 5–12 minutes, 4–5 days/week.</li>
-              <li><strong>Best choices:</strong> low-impact indoor marching, stationary bike, flat walking.</li>
-              <li><strong>Use:</strong> Workout A + Workout C + short cardio.</li>
-            </ul>
+            <p class="phase-goal">Reduce fear and flare-ups, learn the movements, and break the cycle of pain → rest → weakness → more pain.</p>
+            <dl class="phase-metrics">
+              <div><dt>Strength</dt><dd>2–3 days / week</dd></div>
+              <div><dt>Cardio</dt><dd>5–12 min, 4–5 days</dd></div>
+              <div><dt>Primary sessions</dt><dd>Workout A + C</dd></div>
+            </dl>
+            <div class="phase-note"><span>Best choices</span><p>Low-impact indoor marching, stationary cycling, and flat walking.</p></div>
           </article>
           <article class="phase-card" id="phase2" role="tabpanel" hidden>
-            <span class="phase-number">02</span>
+            <div class="phase-card-head"><span>PHASE 02</span><span>4 WEEKS</span></div>
             <h3>Build the support system</h3>
-            <p>Goal: make thighs, hips, glutes, calves, and core strong enough to unload joints and calm irritated nerves.</p>
-            <ul class="clean-list">
-              <li><strong>Strength:</strong> 3 days/week.</li>
-              <li><strong>Cardio:</strong> 12–25 minutes, 4–5 days/week.</li>
-              <li><strong>Add:</strong> low step-ups, balance, gentle hip hinge.</li>
-              <li><strong>Use:</strong> Workouts A, B, C, and optional Home Cardio Day.</li>
-            </ul>
+            <p class="phase-goal">Strengthen thighs, hips, glutes, calves, and core so the joints and irritated nerve carry less stress.</p>
+            <dl class="phase-metrics">
+              <div><dt>Strength</dt><dd>3 days / week</dd></div>
+              <div><dt>Cardio</dt><dd>12–25 min, 4–5 days</dd></div>
+              <div><dt>Add</dt><dd>Step-ups, balance, hip hinge</dd></div>
+            </dl>
+            <div class="phase-note"><span>Primary sessions</span><p>Workouts A, B, C, plus an optional Home Cardio Day.</p></div>
           </article>
           <article class="phase-card" id="phase3" role="tabpanel" hidden>
-            <span class="phase-number">03</span>
+            <div class="phase-card-head"><span>PHASE 03</span><span>6 WEEKS</span></div>
             <h3>Strength for real life</h3>
-            <p>Goal: easier stairs, longer walks, better balance, less joint load, and less flare-up risk.</p>
-            <ul class="clean-list">
-              <li><strong>Strength:</strong> 3 days/week with controlled progress.</li>
-              <li><strong>Cardio:</strong> build toward 150 minutes/week if tolerated.</li>
-              <li><strong>Progress:</strong> one variable at a time — reps, set, step height, or band.</li>
-              <li><strong>Use:</strong> all workouts, rotating by symptoms.</li>
-            </ul>
+            <p class="phase-goal">Make stairs, longer walks, balance, and daily movement easier while lowering the risk of future flare-ups.</p>
+            <dl class="phase-metrics">
+              <div><dt>Strength</dt><dd>3 days / week</dd></div>
+              <div><dt>Cardio</dt><dd>Build toward 150 min / week</dd></div>
+              <div><dt>Progress</dt><dd>One variable at a time</dd></div>
+            </dl>
+            <div class="phase-note"><span>Primary sessions</span><p>Rotate all four workouts according to symptoms and next-day response.</p></div>
           </article>
-        </div>
-      </div>
 
-      <div class="container calendar-wrap reveal">
-        <h3 class="micro-heading">A simple week that works</h3>
-        <div class="calendar-grid" aria-label="Weekly workout calendar">
-          <article><span>Mon</span><strong>Workout A</strong><small>Joint strength</small></article>
-          <article><span>Tue</span><strong>Cardio</strong><small>Walk, bike, swim</small></article>
-          <article><span>Wed</span><strong>Workout C</strong><small>Spine/nerve calm</small></article>
-          <article><span>Thu</span><strong>Cardio</strong><small>Easy zone</small></article>
-          <article><span>Fri</span><strong>Workout B</strong><small>Leg + balance</small></article>
-          <article><span>Sat</span><strong>Home cardio / walk</strong><small>Long easy movement</small></article>
-          <article><span>Sun</span><strong>Reset</strong><small>Mobility + rest</small></article>
+          <div class="week-card">
+            <div class="week-card-head"><span>A repeatable week</span><span>WEEK / TEMPLATE</span></div>
+            <div class="calendar-grid" aria-label="Weekly workout calendar">
+              <article><span>MON</span><strong>Workout A</strong><small>Joint strength</small></article>
+              <article><span>TUE</span><strong>Cardio</strong><small>Easy zone</small></article>
+              <article><span>WED</span><strong>Workout C</strong><small>Spine + nerve calm</small></article>
+              <article><span>THU</span><strong>Cardio</strong><small>Walk, cycle, or swim</small></article>
+              <article><span>FRI</span><strong>Workout B</strong><small>Leg + balance</small></article>
+              <article><span>SAT</span><strong>Workout D</strong><small>Home cardio</small></article>
+              <article><span>SUN</span><strong>Reset</strong><small>Mobility + recovery</small></article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="workouts">
+    <section class="section workouts-section" id="workouts">
       <div class="container">
-        <div class="section-heading center reveal">
-          <p class="eyebrow"><span></span>Step 3</p>
-          <h2>Four named workouts. No guessing.</h2>
-          <p>Each workout has a simple purpose. Start with the easiest version. Check off what you finish — it saves on this device.</p>
-        </div>
+        <header class="section-heading split-heading reveal">
+          <div>
+            <span class="section-index">03 / SESSIONS</span>
+            <p class="eyebrow">Four repeatable workouts</p>
+            <h2>Open the session. Follow the sequence. Stop with something left.</h2>
+          </div>
+          <p>Your checkmarks stay on this device, so you can leave and return without rebuilding the plan. A finished session is useful; an heroic flare-up is not.</p>
+        </header>
         <div class="workout-grid" id="workoutGrid"></div>
       </div>
     </section>
 
-    <section class="section dark" id="session-builder">
-      <div class="container builder-grid">
-        <div class="builder-copy reveal">
-          <p class="eyebrow light"><span></span>Step 4</p>
-          <h2>Choose today’s session by symptoms.</h2>
-          <p>Most people fail rehab because the plan ignores bad days. This section gives the patient a quick decision system.</p>
-        </div>
-        <div class="decision-board reveal delay-1">
-          <button class="decision active" data-decision="calm" type="button">
-            <span>Today is painful / stiff</span>
-            <strong>Do Calm Day</strong>
-            <small>mobility + march/bike/walk + easy core</small>
-          </button>
-          <button class="decision" data-decision="normal" type="button">
-            <span>Today is normal</span>
-            <strong>Do Strength Day</strong>
-            <small>Workout A or B</small>
-          </button>
-          <button class="decision" data-decision="nerve" type="button">
-            <span>Pain shoots down leg</span>
-            <strong>Do Nerve Day</strong>
-            <small>Workout C + avoid bending/lifting</small>
-          </button>
-        </div>
-        <article class="prescription reveal" id="dailyPrescription" aria-live="polite"></article>
-      </div>
-    </section>
-
-    <section class="section" id="library">
+    <section class="section library-section" id="library">
       <div class="container">
-        <div class="library-top reveal">
+        <header class="library-top reveal">
           <div class="section-heading">
-            <p class="eyebrow"><span></span>Step 5</p>
-            <h2>Guided motion library with clearer visual demos.</h2>
-            <p>There are <strong>24 exercises total</strong>. Each card now behaves like a tiny coach: realistic body position, equipment context, movement path, and a calm cadence that makes the right motion easier to understand.</p>
+            <span class="section-index">04 / MOVEMENT ATLAS</span>
+            <p class="eyebrow">24 guided movements</p>
+            <h2>A small coach for every exercise.</h2>
+            <p>See the setup, purpose, dose, easier option, harder option, and stop rule—without opening a second page.</p>
           </div>
           <div class="search-card" role="search">
-            <label for="exerciseSearch">Find an exercise</label>
-            <input id="exerciseSearch" type="search" placeholder="Search: bridge, sciatica, ankle, chair..." />
+            <div class="search-label-row"><label for="exerciseSearch">Find a movement</label><span id="exerciseCount" aria-live="polite"></span></div>
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+              <input id="exerciseSearch" type="search" autocomplete="off" placeholder="Search bridge, chair, nerve, ankle…" />
+            </div>
             <div class="filter-row" aria-label="Exercise filters">
               <button class="filter-chip active" data-filter="all" type="button">All</button>
               <button class="filter-chip" data-filter="knee" type="button">Knee</button>
               <button class="filter-chip" data-filter="hip" type="button">Hip</button>
-              <button class="filter-chip" data-filter="ankle" type="button">Ankle/foot</button>
-              <button class="filter-chip" data-filter="sciatica" type="button">Sciatica/back</button>
+              <button class="filter-chip" data-filter="ankle" type="button">Ankle / foot</button>
+              <button class="filter-chip" data-filter="sciatica" type="button">Sciatica / back</button>
               <button class="filter-chip" data-filter="cardio" type="button">Cardio</button>
             </div>
-            <button class="reset-library" id="resetLibrary" type="button">Reset library view</button>
+            <button class="reset-library" id="resetLibrary" type="button">Reset filters</button>
           </div>
-        </div>
-        <div class="exercise-count" id="exerciseCount"></div>
+        </header>
         <div class="exercise-grid" id="exerciseGrid"></div>
       </div>
     </section>
 
-    <section class="section split" id="progression">
-      <div class="container split-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow"><span></span>Progress rules</p>
+    <section class="section progression-section" id="progression">
+      <div class="container progression-layout">
+        <header class="section-heading reveal">
+          <span class="section-index">05 / PROGRESSION</span>
+          <p class="eyebrow">The next-day rule</p>
           <h2>Make it harder only when the body earns it.</h2>
-          <p>Progress should feel steady and manageable. The best rehab is often not dramatic — it is repeatable.</p>
-        </div>
+          <p>Good progression is almost boring: a little more capacity, no dramatic spike, and a body that still agrees with the decision tomorrow.</p>
+        </header>
         <div class="rules-stack reveal delay-1">
-          <article><span>01</span><h3>One change at a time</h3><p>Add reps, or add a set, or add resistance. Never all three in the same week.</p></article>
-          <article><span>02</span><h3>Next-day check</h3><p>If pain or swelling is worse the next day, the previous session was too much.</p></article>
-          <article><span>03</span><h3>Range before load</h3><p>First move well. Then move more. Then add resistance.</p></article>
-          <article><span>04</span><h3>Cardio without pounding</h3><p>Low-impact indoor marching, stationary cycling, elliptical, and flat walking beat jumping and running early on.</p></article>
+          <article><span>01</span><div><h3>One change at a time</h3><p>Add reps, a set, resistance, or range—never all four in the same week.</p></div></article>
+          <article><span>02</span><div><h3>Check tomorrow</h3><p>If pain, swelling, or limping is clearly worse the next day, the previous dose was too high.</p></div></article>
+          <article><span>03</span><div><h3>Range before load</h3><p>First move well. Then move farther. Only then add resistance.</p></div></article>
+          <article><span>04</span><div><h3>Cardio without pounding</h3><p>Marching, cycling, elliptical work, and flat walking usually beat jumping and running early on.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section safety" id="safety">
-      <div class="container safety-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow"><span></span>Safety</p>
-          <h2>Stop signs are part of the plan.</h2>
-          <p>This plan is educational. It does not replace a doctor or physical therapist. Use extra caution with diabetes, osteoporosis, heart disease, recent injury, severe arthritis, neurological symptoms, or unexplained weight loss.</p>
-        </div>
+    <section class="section safety-section" id="safety">
+      <div class="container safety-layout">
+        <header class="section-heading reveal">
+          <span class="section-index light-index">06 / SAFETY</span>
+          <p class="eyebrow safety-eyebrow">Stop signs belong inside the plan.</p>
+          <h2>Some symptoms need care, not another exercise.</h2>
+          <p>This guide is educational and does not replace a doctor or physical therapist. Use extra caution with diabetes, osteoporosis, heart disease, recent injury, severe arthritis, neurological symptoms, or unexplained weight loss.</p>
+        </header>
         <div class="redflag-card reveal delay-1">
-          <h3>Get medical help quickly if:</h3>
+          <div class="redflag-head"><span>URGENT REVIEW</span><span>RED FLAGS / 06</span></div>
+          <h3>Get medical help quickly if you notice:</h3>
           <ul>
-            <li>New bowel or bladder problems.</li>
-            <li>Numbness in the groin/saddle area.</li>
-            <li>New serious leg weakness or foot drop.</li>
-            <li>Joint is hot, very swollen, red, or feverish.</li>
-            <li>Cannot bear weight, the knee locks, or pain follows a fall/twist.</li>
-            <li>Pain keeps worsening after 2–4 weeks of sensible changes.</li>
+            <li><span>01</span>New bowel or bladder problems.</li>
+            <li><span>02</span>Numbness in the groin or saddle area.</li>
+            <li><span>03</span>New serious leg weakness or foot drop.</li>
+            <li><span>04</span>A hot, very swollen, red, or feverish joint.</li>
+            <li><span>05</span>Inability to bear weight, a locked knee, or pain after a fall or twist.</li>
+            <li><span>06</span>Pain that keeps worsening after 2–4 weeks of sensible changes.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="section source-section" id="sources">
-      <div class="container">
-        <div class="source-card reveal">
-          <p class="eyebrow"><span></span>Trusted demos & evidence</p>
-          <h2>Where to learn the exercises visually</h2>
-          <p>The site includes simple steps, but a patient may still want videos or illustrated demos. These links are from medical/arthritis organizations and are also listed inside the exercise cards.</p>
-          <div class="source-grid">
-            <a href="https://orthoinfo.aaos.org/en/recovery/knee-conditioning-program/" target="_blank" rel="noreferrer">AAOS Knee Conditioning Program</a>
-            <a href="https://orthoinfo.aaos.org/en/recovery/hip-conditioning-program/" target="_blank" rel="noreferrer">AAOS Hip Conditioning Program</a>
-            <a href="https://www.nhs.uk/live-well/exercise/exercises-sciatica-problems/" target="_blank" rel="noreferrer">NHS Sciatica Exercises</a>
-            <a href="https://www.arthritis.org/health-wellness/healthy-living/physical-activity/getting-started/benefits-of-exercise-for-osteoarthritis" target="_blank" rel="noreferrer">Arthritis Foundation: Exercise for OA</a>
-            <a href="https://www.arthritis.org/health-wellness/healthy-living/nutrition/weight-loss/oa-diagnosis-why-weight-loss-matters" target="_blank" rel="noreferrer">Arthritis Foundation: Weight & Knee Load</a>
-            <a href="https://www.nice.org.uk/guidance/ng59" target="_blank" rel="noreferrer">NICE Low Back Pain & Sciatica Guideline</a>
-          </div>
+    <section class="section sources-section" id="sources">
+      <div class="container source-card reveal">
+        <div>
+          <span class="section-index">SOURCES / CLINICAL REFERENCES</span>
+          <p class="eyebrow">Trusted demonstrations</p>
+          <h2>Learn the movement from established clinical sources.</h2>
+          <p>Exercise cards link to recognized medical and arthritis organizations for additional visual demonstrations and guidance.</p>
+        </div>
+        <div class="source-grid">
+          <a href="https://orthoinfo.aaos.org/en/recovery/knee-conditioning-program/" target="_blank" rel="noreferrer"><span>AAOS</span>Knee conditioning <b>↗</b></a>
+          <a href="https://orthoinfo.aaos.org/en/recovery/hip-conditioning-program/" target="_blank" rel="noreferrer"><span>AAOS</span>Hip conditioning <b>↗</b></a>
+          <a href="https://www.nhs.uk/live-well/exercise/exercises-sciatica-problems/" target="_blank" rel="noreferrer"><span>NHS</span>Sciatica exercises <b>↗</b></a>
+          <a href="https://www.arthritis.org/health-wellness/healthy-living/physical-activity/getting-started/benefits-of-exercise-for-osteoarthritis" target="_blank" rel="noreferrer"><span>AF</span>Exercise for osteoarthritis <b>↗</b></a>
+          <a href="https://www.arthritis.org/health-wellness/healthy-living/nutrition/weight-loss/oa-diagnosis-why-weight-loss-matters" target="_blank" rel="noreferrer"><span>AF</span>Weight and knee load <b>↗</b></a>
+          <a href="https://www.nice.org.uk/guidance/ng59" target="_blank" rel="noreferrer"><span>NICE</span>Low back pain + sciatica <b>↗</b></a>
         </div>
       </div>
     </section>
@@ -367,19 +411,17 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="#top" aria-label="JointAtlas home">
-          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M11 27c8-1 10-9 18-8 5 1 8 4 8 9 0 6-5 10-11 10-11 0-16-10-16-19C10 10 17 4 25 4c6 0 11 3 14 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
-          <span><strong>JointAtlas</strong><small>Complete movement plan</small></span>
-        </a>
-        <p>Clear, practical, non-surgical education for joint-friendly movement. Not medical advice.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#weekly-plan">Plan</a>
-        <a href="#workouts">Workouts</a>
-        <a href="#library">Exercises</a>
-        <a href="#safety">Safety</a>
-      </div>
+      <a class="brand footer-brand" href="#top" aria-label="JointAtlas home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M8 28.5c8.5 0 10.3-10.3 19.2-10.3 7 0 12.8 5.4 12.8 12.3 0 7-5.8 12.5-12.9 12.5C15.2 43 8 33.7 8 22.2 8 12.8 15.7 5 25.2 5 32.7 5 39 9.4 42 15.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="26.8" cy="30.5" r="3.2" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-copy"><strong>JointAtlas</strong><small>A calmer way back to movement.</small></span>
+      </a>
+      <p>Clear, practical, non-surgical movement education. Not medical advice.</p>
+      <nav aria-label="Footer navigation">
+        <a href="#weekly-plan">Plan</a><a href="#workouts">Sessions</a><a href="#library">Exercises</a><a href="#safety">Safety</a>
+      </nav>
+      <span class="footer-year">© <span id="currentYear"></span> JointAtlas</span>
     </div>
   </footer>
 
